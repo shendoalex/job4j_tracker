@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class Library {
     public static void main(String[] args) {
-        Book bookOne = new Book();
-        Book bookTwo = new Book();
-        Book bookThree = new Book();
-        Book bookFour = new Book();
+        Book bookOne = new Book("I will end with you", 123);
+        Book bookTwo = new Book("It starts with us", 243);
+        Book bookThree = new Book("The courage to be free", 534);
+        Book bookFour = new Book("Daisy jones and the six", 224);
         Book[] books = new Book[4];
         books[0] = bookOne;
         books[1] = bookTwo;
@@ -24,7 +24,7 @@ public class Library {
             System.out.println(books[i].getName());
         }
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getName() == "Clean Code") {
+            if ("Clean Code".equals(books[i].getName())) {
                 System.out.println(books[i].getName());
             }
         }
