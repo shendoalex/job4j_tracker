@@ -10,7 +10,7 @@ public class StartUI {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         String localFormatted = local.format(format);
         System.out.println(localFormatted);
-        Item item2 = new Item(14,"Alex");
+        Item item2 = new Item(14, "Alex");
         System.out.println(item2);
     }
 }
