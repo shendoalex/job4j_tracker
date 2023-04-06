@@ -1,0 +1,277 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "ru.job4j.tracker.UserAction#name()",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "ru.job4j.tracker.UserAction",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_101295923 { 
+   	label=job4j
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_2048152707 { 
+   	label=tracker
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1886975866 { 
+   	label=StartUI
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   StartUI1610464494XXXinit1456823761[
+	label="+ init()"
+	style=filled
+	fillcolor=white
+	tooltip="StartUI
+
+null"
+	fontcolor=darkgreen
+];
+
+StartUI1610464494XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="StartUI
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2029915453 { 
+   	label=DeleteAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DeleteAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="DeleteAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_30779342 { 
+   	label=CreateAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   CreateAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="CreateAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_404565006 { 
+   	label=ReplaceAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ReplaceAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="ReplaceAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_716016221 { 
+   	label=UserAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   UserAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="UserAction
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_725758608 { 
+   	label=ExitAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ExitAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="ExitAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_771298869 { 
+   	label=FindAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FindAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="FindAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_783610975 { 
+   	label=FindItemsAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FindItemsAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="FindItemsAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_93008881 { 
+   	label=ShowAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ShowAction1610464494XXXname0[
+	label="+ name()"
+	style=filled
+	fillcolor=white
+	tooltip="ShowAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+StartUI1610464494XXXinit1456823761 -> UserAction1610464494XXXname0;
+StartUI1610464494XXXmain1859653459 -> StartUI1610464494XXXinit1456823761;
+UserAction1610464494XXXname0 -> CreateAction1610464494XXXname0;
+UserAction1610464494XXXname0 -> DeleteAction1610464494XXXname0;
+UserAction1610464494XXXname0 -> ExitAction1610464494XXXname0;
+UserAction1610464494XXXname0 -> FindAction1610464494XXXname0;
+UserAction1610464494XXXname0 -> FindItemsAction1610464494XXXname0;
+UserAction1610464494XXXname0 -> ReplaceAction1610464494XXXname0;
+UserAction1610464494XXXname0 -> ShowAction1610464494XXXname0;
+    
+}
+@enduml

@@ -1,0 +1,475 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "ru.job4j.tracker.UserAction#execute(Input,Tracker)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "ru.job4j.tracker.UserAction",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_101295923 { 
+   	label=job4j
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_2048152707 { 
+   	label=tracker
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1578201028 { 
+   	label=Tracker
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Tracker1610464494XXXadd2289459[
+	label="+ add()"
+	style=filled
+	fillcolor=white
+	tooltip="Tracker
+
+null"
+	fontcolor=darkgreen
+];
+
+Tracker1610464494XXXdelete104431[
+	label="+ delete()"
+	style=filled
+	fillcolor=white
+	tooltip="Tracker
+
+null"
+	fontcolor=darkgreen
+];
+
+Tracker1610464494XXXfindAll0[
+	label="+ findAll()"
+	style=filled
+	fillcolor=white
+	tooltip="Tracker
+
+null"
+	fontcolor=darkgreen
+];
+
+Tracker1610464494XXXfindById104431[
+	label="+ findById()"
+	style=filled
+	fillcolor=white
+	tooltip="Tracker
+
+null"
+	fontcolor=darkgreen
+];
+
+Tracker1610464494XXXfindByName1808118735[
+	label="+ findByName()"
+	style=filled
+	fillcolor=white
+	tooltip="Tracker
+
+null"
+	fontcolor=darkgreen
+];
+
+Tracker1610464494XXXreplace1205812394[
+	label="+ replace()"
+	style=filled
+	fillcolor=white
+	tooltip="Tracker
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1886975866 { 
+   	label=StartUI
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   StartUI1610464494XXXinit1456823761[
+	label="+ init()"
+	style=filled
+	fillcolor=white
+	tooltip="StartUI
+
+null"
+	fontcolor=darkgreen
+];
+
+StartUI1610464494XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="StartUI
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2029915453 { 
+   	label=DeleteAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DeleteAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="DeleteAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_30779342 { 
+   	label=CreateAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   CreateAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="CreateAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_311457233 { 
+   	label=ConsoleInput
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsoleInput1610464494XXXaskInt1808118735[
+	label="+ askInt()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsoleInput
+
+null"
+	fontcolor=darkgreen
+];
+
+ConsoleInput1610464494XXXaskStr1808118735[
+	label="+ askStr()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsoleInput
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_404565006 { 
+   	label=ReplaceAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ReplaceAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="ReplaceAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_519031755 { 
+   	label=StubOutput
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   StubOutput1610464494XXXprintln1939501217[
+	label="+ println()"
+	style=filled
+	fillcolor=white
+	tooltip="StubOutput
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_716016221 { 
+   	label=UserAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   UserAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="UserAction
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_725758608 { 
+   	label=ExitAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ExitAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="ExitAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_771298869 { 
+   	label=FindAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FindAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="FindAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_783610975 { 
+   	label=FindItemsAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FindItemsAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="FindItemsAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_886885572 { 
+   	label=ConsoleOutput
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsoleOutput1610464494XXXprintln1939501217[
+	label="+ println()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsoleOutput
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_93008881 { 
+   	label=ShowAction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ShowAction1610464494XXXexecute1684883782[
+	label="+ execute()"
+	style=filled
+	fillcolor=white
+	tooltip="ShowAction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_980820928 { 
+   	label=StubInput
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   StubInput1610464494XXXaskInt1808118735[
+	label="+ askInt()"
+	style=filled
+	fillcolor=white
+	tooltip="StubInput
+
+null"
+	fontcolor=darkgreen
+];
+
+StubInput1610464494XXXaskStr1808118735[
+	label="+ askStr()"
+	style=filled
+	fillcolor=white
+	tooltip="StubInput
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_981896616 { 
+   	label=ValidateInput
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ValidateInput1610464494XXXaskInt1808118735[
+	label="+ askInt()"
+	style=filled
+	fillcolor=white
+	tooltip="ValidateInput
+
+null"
+	fontcolor=darkgreen
+];
+
+ValidateInput1610464494XXXaskStr1808118735[
+	label="+ askStr()"
+	style=filled
+	fillcolor=white
+	tooltip="ValidateInput
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+ConsoleInput1610464494XXXaskInt1808118735 -> ConsoleInput1610464494XXXaskStr1808118735;
+CreateAction1610464494XXXexecute1684883782 -> Tracker1610464494XXXadd2289459;
+DeleteAction1610464494XXXexecute1684883782 -> ConsoleInput1610464494XXXaskInt1808118735;
+DeleteAction1610464494XXXexecute1684883782 -> StubInput1610464494XXXaskInt1808118735;
+DeleteAction1610464494XXXexecute1684883782 -> Tracker1610464494XXXdelete104431;
+DeleteAction1610464494XXXexecute1684883782 -> ValidateInput1610464494XXXaskInt1808118735;
+FindAction1610464494XXXexecute1684883782 -> Tracker1610464494XXXfindById104431;
+FindItemsAction1610464494XXXexecute1684883782 -> ConsoleInput1610464494XXXaskStr1808118735;
+FindItemsAction1610464494XXXexecute1684883782 -> ConsoleOutput1610464494XXXprintln1939501217;
+FindItemsAction1610464494XXXexecute1684883782 -> StubInput1610464494XXXaskStr1808118735;
+FindItemsAction1610464494XXXexecute1684883782 -> StubOutput1610464494XXXprintln1939501217;
+FindItemsAction1610464494XXXexecute1684883782 -> Tracker1610464494XXXfindByName1808118735;
+FindItemsAction1610464494XXXexecute1684883782 -> ValidateInput1610464494XXXaskStr1808118735;
+ReplaceAction1610464494XXXexecute1684883782 -> Tracker1610464494XXXreplace1205812394;
+ShowAction1610464494XXXexecute1684883782 -> Tracker1610464494XXXfindAll0;
+StartUI1610464494XXXinit1456823761 -> UserAction1610464494XXXexecute1684883782;
+StartUI1610464494XXXmain1859653459 -> StartUI1610464494XXXinit1456823761;
+StubInput1610464494XXXaskInt1808118735 -> StubInput1610464494XXXaskStr1808118735;
+UserAction1610464494XXXexecute1684883782 -> CreateAction1610464494XXXexecute1684883782;
+UserAction1610464494XXXexecute1684883782 -> DeleteAction1610464494XXXexecute1684883782;
+UserAction1610464494XXXexecute1684883782 -> ExitAction1610464494XXXexecute1684883782;
+UserAction1610464494XXXexecute1684883782 -> FindAction1610464494XXXexecute1684883782;
+UserAction1610464494XXXexecute1684883782 -> FindItemsAction1610464494XXXexecute1684883782;
+UserAction1610464494XXXexecute1684883782 -> ReplaceAction1610464494XXXexecute1684883782;
+UserAction1610464494XXXexecute1684883782 -> ShowAction1610464494XXXexecute1684883782;
+    
+}
+@enduml
