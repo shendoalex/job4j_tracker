@@ -33,6 +33,4 @@ public final class Airbus extends Aircraft {
                 + "name='" + name + '\''
                 + '}';
     }
-
-    ;
 }
