@@ -35,11 +35,11 @@ public class Tracker {
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
         item.setId(id);
-        boolean result = !(index < 0);
-        if (result) {
+        boolean rsl = index != -1;
+        if (rsl) {
             this.items.set(index, item);
         }
-        return result;
+        return rsl;
     }
 
     private int indexOf(int id) {
@@ -47,7 +47,8 @@ public class Tracker {
         for (int i = 0; i < items.size(); i++) {
             Item item = items.get(i);
             if (item.getId() == id) {
-                rsl = items.indexOf(item);
+                rsl = i;
+                break;
             }
         }
         return rsl;
@@ -58,7 +59,7 @@ public class Tracker {
         boolean rsl = index != -1;
         Item item = findById(id);
         if (rsl) {
-            items.remove(item);
+            items.remove(index);
         }
         return rsl;
     }
