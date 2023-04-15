@@ -5,14 +5,16 @@ import java.util.List;
 
 public class Tracker {
     private final List<Item> items = new ArrayList<>();
+    private int ids = 1;
 
     public Item add(Item item) {
+        item.setId(ids++);
         items.add(item);
         return item;
     }
 
     public List<Item> findAll() {
-        return this.items;
+        return List.copyOf(items);
     }
 
     public List<Item> findByName(String key) {
@@ -26,27 +28,24 @@ public class Tracker {
     }
 
     public Item findById(int id) {
-        Item result = null;
-        for (Item item : items) {
-            if (item.getId() == id) {
-                result = item;
-            }
-        }
-        return result;
+        int index = indexOf(id);
+        return index != -1 ? items.get(index) : null;
     }
 
     public boolean replace(int id, Item item) {
+        int index = indexOf(id);
         item.setId(id);
-        boolean result = !(indexOf(id) < 0);
+        boolean result = !(index < 0);
         if (result) {
-            this.items.set(indexOf(id), item);
+            this.items.set(index, item);
         }
         return result;
     }
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (Item item : items) {
+        for (int i = 0; i < items.size(); i++) {
+            Item item = items.get(i);
             if (item.getId() == id) {
                 rsl = items.indexOf(item);
             }
@@ -55,8 +54,9 @@ public class Tracker {
     }
 
     public boolean delete(int id) {
+        int index = indexOf(id);
+        boolean rsl = index != -1;
         Item item = findById(id);
-        boolean rsl = !(item == null);
         if (rsl) {
             items.remove(item);
         }
