@@ -36,10 +36,7 @@ public class AnalyzeByMap {
         int pupilCount = 0;
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                if (!tempMap.containsKey(subject.name())) {
-                    tempMap.put(subject.name(), 0);
-                }
-                tempMap.put(subject.name(), tempMap.get(subject.name()) + subject.score());
+                tempMap.put(subject.name(), tempMap.getOrDefault(subject.name(), 0) + subject.score());
             }
             pupilCount++;
         }
@@ -55,10 +52,7 @@ public class AnalyzeByMap {
         List<Label> resultList = new ArrayList<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                if (!tempMap.containsKey(pupil.name())) {
-                    tempMap.put(pupil.name(), 0);
-                }
-                tempMap.put(pupil.name(), tempMap.get(pupil.name()) + subject.score());
+                tempMap.put(pupil.name(), tempMap.getOrDefault(pupil.name(), 0) + subject.score());
             }
         }
         for (Map.Entry<String, Integer> str : tempMap.entrySet()) {
@@ -74,10 +68,7 @@ public class AnalyzeByMap {
         List<Label> resultList = new ArrayList<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                if (!tempMap.containsKey(subject.name())) {
-                    tempMap.put(subject.name(), 0);
-                }
-                tempMap.put(subject.name(), tempMap.get(subject.name()) + subject.score());
+                tempMap.put(subject.name(), tempMap.getOrDefault(subject.name(), 0) + subject.score());
             }
         }
         for (Map.Entry<String, Integer> str : tempMap.entrySet()) {
