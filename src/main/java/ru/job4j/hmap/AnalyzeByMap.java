@@ -50,18 +50,13 @@ public class AnalyzeByMap {
     }
 
     public static Label bestStudent(List<Pupil> pupils) {
-        Map<String, Integer> tempMap = new LinkedHashMap<>();
         List<Label> resultList = new ArrayList<>();
         for (Pupil pupil : pupils) {
             int tempCount = 0;
             for (Subject subject : pupil.subjects()) {
-                tempCount = tempMap.getOrDefault(pupil.name(), 0);
-                tempMap.put(pupil.name(), tempCount + subject.score());
+                tempCount = tempCount + subject.score();
+                resultList.add(new Label(pupil.name(), tempCount));
             }
-        }
-        for (Map.Entry<String, Integer> str : tempMap.entrySet()) {
-            Label label = new Label(str.getKey(), (double) str.getValue());
-            resultList.add(label);
         }
         resultList.sort(Comparator.naturalOrder());
         return resultList.get(resultList.size() - 1);
