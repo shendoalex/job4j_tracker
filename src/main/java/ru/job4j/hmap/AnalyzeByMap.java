@@ -35,8 +35,10 @@ public class AnalyzeByMap {
         List<Label> resultList = new ArrayList<>();
         int pupilCount = 0;
         for (Pupil pupil : pupils) {
+            int tempCount = 0;
             for (Subject subject : pupil.subjects()) {
-                tempMap.put(subject.name(), tempMap.getOrDefault(subject.name(), 0) + subject.score());
+                tempCount = tempMap.getOrDefault(subject.name(), 0);
+                tempMap.put(subject.name(), tempCount + subject.score());
             }
             pupilCount++;
         }
@@ -51,8 +53,10 @@ public class AnalyzeByMap {
         Map<String, Integer> tempMap = new LinkedHashMap<>();
         List<Label> resultList = new ArrayList<>();
         for (Pupil pupil : pupils) {
+            int tempCount = 0;
             for (Subject subject : pupil.subjects()) {
-                tempMap.put(pupil.name(), tempMap.getOrDefault(pupil.name(), 0) + subject.score());
+                tempCount = tempMap.getOrDefault(pupil.name(), 0);
+                tempMap.put(pupil.name(), tempCount + subject.score());
             }
         }
         for (Map.Entry<String, Integer> str : tempMap.entrySet()) {
@@ -67,8 +71,10 @@ public class AnalyzeByMap {
         Map<String, Integer> tempMap = new LinkedHashMap<>();
         List<Label> resultList = new ArrayList<>();
         for (Pupil pupil : pupils) {
+            int tempCount = 0;
             for (Subject subject : pupil.subjects()) {
-                tempMap.put(subject.name(), tempMap.getOrDefault(subject.name(), 0) + subject.score());
+                tempCount = tempMap.getOrDefault(subject.name(), 0);
+                tempMap.put(subject.name(), tempCount + subject.score());
             }
         }
         for (Map.Entry<String, Integer> str : tempMap.entrySet()) {
