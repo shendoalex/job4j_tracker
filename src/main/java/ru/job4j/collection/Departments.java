@@ -9,8 +9,8 @@ public class Departments {
         for (String value : deps) {
             String startCode = "";
             for (String currentCode : value.split("/")) {
-                tmp.add(startCode + currentCode);
-                startCode += currentCode + "/";
+                startCode += "".equals(startCode) ? currentCode : "/" + currentCode;
+                tmp.add(startCode);
             }
         }
 

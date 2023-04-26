@@ -5,7 +5,6 @@ import java.util.Comparator;
 public class DepDescComp implements Comparator<String> {
     @Override
     public int compare(String o1, String o2) {
-        int rsl = 0;
         String[] a = o1.split("/", 2);
         String[] b = o2.split("/", 2);
         int compare = b[0].compareTo(a[0]);
