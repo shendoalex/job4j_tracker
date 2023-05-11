@@ -37,8 +37,7 @@ public class AnalyzeByMap {
         for (Pupil pupil : pupils) {
             int tempCount = 0;
             for (Subject subject : pupil.subjects()) {
-                tempCount = tempMap.getOrDefault(subject.name(), 0);
-                tempMap.put(subject.name(), tempCount + subject.score());
+                tempMap.merge(subject.name(), subject.score(), Integer::sum);
             }
             pupilCount++;
         }
@@ -68,8 +67,7 @@ public class AnalyzeByMap {
         for (Pupil pupil : pupils) {
             int tempCount = 0;
             for (Subject subject : pupil.subjects()) {
-                tempCount = tempMap.getOrDefault(subject.name(), 0);
-                tempMap.put(subject.name(), tempCount + subject.score());
+                tempMap.merge(subject.name(), subject.score(), Integer::sum);
             }
         }
         for (Map.Entry<String, Integer> str : tempMap.entrySet()) {
